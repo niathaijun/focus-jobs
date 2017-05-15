@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   def show
     @job = Job.find(params[:id])
     if @job.is_hidden
-       flash[:warning] = "此职位已归档！"
+       flash[:warning] = "此职位已取消！"
        redirect_to root_path
      end
   end
